@@ -25,7 +25,6 @@ function printDomains(tlds, domainLength, chars, count, logToFile) {
   }
 
   if (logToFile) {
-    const timestamp = new Date().toISOString();
     const logData = domains.join("\n");
     fs.appendFileSync("domains.log", `${logData}\n`);
     console.log("\nDomains have been logged to domains.log");
